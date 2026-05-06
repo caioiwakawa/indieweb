@@ -2,13 +2,7 @@
   {
     "id": "1",
     "title": "My First Post",
-    "content": "This is stored in a JSON file!",
+    "content": "This is a test post. It should be on the front page! If it isn't, then either an error has occured, or another post has been made.",
     "date": "2026-05-05"
-  },
-  {
-    "id": "2",
-    "title": "Why I Love Express",
-    "content": "Middleware is actually pretty cool once you get it.",
-    "date": "2026-05-06"
   }
 ]

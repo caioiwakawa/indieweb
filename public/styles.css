@@ -59,4 +59,31 @@ header {
 .blog-container {
     background-color: var(--primary-green);
     grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.latest {
+    font-family: "Jersey 10";
+    background-color: red;
+    margin: 16px;
+}
+
+.post-title {
+    background-color: blue;
+    text-align: center;
+    margin: 0 16px 0 16px;
+}
+
+.post-body {
+    background-color: white;
+    text-align: justify;
+    margin: 16px;
+    flex-grow: 1;
+}
+
+.welcome {
+    background-color: blue;
+    text-align: justify;
+    margin: 16px;
 }

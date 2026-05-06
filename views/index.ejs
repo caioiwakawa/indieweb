@@ -14,20 +14,24 @@
     <header>
         <div class="nav-container">
             <a class="nav-text" href="/">Manju's Realm</a>
+            <a class="nav-text about" href="/blog">Blog</a>
             <a class="nav-text about" href="/about">About</a>
         </div>
     </header>
 
     <div class="grid">
-        <div class="welcome-container"></div>
+        <div class="welcome-container">
+            <h2 class="welcome">I’m Manju, and You just stumbled into my Realm. Welcome!</h1>
+            <h3 class="welcome">I always dreamed of having my own little part of the Web. Here, I can share whatever I want to the world! Please enjoy your stay, You can look at what my current and past interests, any projects that I may be working on, and my blog! Then, if you wish to say anything to Me, send me an e-mail! I’ll be sure to reply.</h3>
+        </div>
         <div class="status-container"></div>
         <div class="blog-container">
 
             <h1 class="latest">Latest Post</h1>
 
-            <h2><%- latest_post.title -%></h2>
+            <h2 class="post-title"><%- latest_post.title -%></h2>
 
-            <%- latest_post.content -%>
+            <div class="post-body"><%- latest_post.content -%></div>
 
         </div>
     </div>

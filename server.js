@@ -1,23 +1,25 @@
 const express = require('express')
 const app = express()
-const fs = require('fs').promises
-const path = require('path')
+const postStore = require('./utils/postStore')
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-async function getLatestPost() {
-    const data = await fs.readFile(path.join(__dirname, 'posts', '/posts.json'))
-    const posts = JSON.parse(data)
-    return posts.at(-1)
-}
-
 app.get('/', async (req, res) => {
     try {
-        latest_post = await getLatestPost()
+        latest_post = await postStore.getLatestPost()
         res.render('index', { latest_post: latest_post})
     } catch (err) {
         console.log("Error fetching blog post:", err)
+    }
+})
+
+app.get('/blog', async (req, res) => {
+    try {
+        posts = await postStore.getPosts()
+        res.render('blog', { posts: posts })
+    } catch (err) {
+        console.log("Error fetching posts:", err)
     }
 })
 
