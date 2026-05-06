@@ -15,7 +15,7 @@ async function getLatestPost() {
 app.get('/', async (req, res) => {
     try {
         latest_post = await getLatestPost()
-        res.render('index', {latest_post})
+        res.render('index', { latest_post: latest_post})
     } catch (err) {
         console.log("Error fetching blog post:", err)
     }
